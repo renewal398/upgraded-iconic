@@ -60,7 +60,7 @@
 /* ===== MOBILE RESPONSIVE ===== */
 @media (max-width: 768px) {
   .hero {
-    height: calc(60vh - 70px);
+    height: calc(70vh - 70px);
   }
 
   .heroOverlay {
