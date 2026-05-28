@@ -1,0 +1,87 @@
+.hero {
+  position: relative;
+  height: 85vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ===== SLIDE BACKGROUND ===== */
+.slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 1.2s ease-in-out;
+  z-index: 1;
+}
+
+.fadeIn {
+  opacity: 1;
+}
+
+.fadeOut {
+  opacity: 0;
+}
+
+/* ===== DARK OVERLAY + TEXT CONTAINER ===== */
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.55);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* push text to bottom */
+  align-items: flex-start; /* push text to left */
+
+  padding: 0px 60px 20px 30px; /* left spacing + bottom spacing */
+  text-align: left;
+  color: white;
+}
+
+/* ===== HEADING ===== */
+.heroOverlay h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  font-family: mulish;
+}
+
+/* ===== SUBTEXT ===== */
+.heroOverlay p {
+  font-size: 1rem;
+  max-width: 700px;
+  opacity: 0.95;
+  font-family: mulish;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero {
+    height: calc(60vh - 70px);
+  }
+
+  .heroOverlay {
+    padding: 0 20px 30px 20px;
+  }
+
+  .heroOverlay h1 {
+    font-size: 1.5rem;
+  }
+
+  .heroOverlay p {
+    font-size: 0.9rem;
+  }
+}
+
+.noOverlay {
+  background: transparent;
+  color: rgb(228, 4, 4);
+}
+
+.noOverlay h1,
+.noOverlay p {
+  color: rgb(228, 4, 4);
+}

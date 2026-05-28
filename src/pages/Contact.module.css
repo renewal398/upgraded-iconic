@@ -1,0 +1,192 @@
+.contactSection{
+  padding:80px 20px;
+  background:#f9f9f9;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+/* LEFT SIDE */
+
+.contactInfo h3{
+  font-size:20px;
+  letter-spacing:1px;
+  color:rgb(228,4,4);
+  margin-bottom:25px;
+  font-family: 'Mulish', sans-serif;
+}
+
+.infoItem{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:16px;
+  color:#444;
+  font-size:15px;
+    font-family: 'Mulish', sans-serif;
+
+}
+
+.infoItem svg{
+  color:rgb(228,4,4);
+}
+
+/* SOCIAL ICONS */
+
+.socials{
+  display:flex;
+  gap:18px;
+  margin-top:25px;
+}
+
+.socials svg{
+  font-size:18px;
+  color:rgb(228,4,4);
+  cursor:pointer;
+}
+
+/* RIGHT IMAGE */
+
+.contactImage img{
+  width:100%;
+  border-radius:8px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  .container{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+
+  .contactImage{
+    order:-1;
+  }
+
+}
+
+/* PREMIUM MAP STYLE */
+
+.contactMap{
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,0.15);
+  transition:all 0.4s ease;
+}
+
+.contactMap:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 45px rgba(228,4,4,0.25);
+}
+
+.contactMap iframe{
+  width:100%;
+  height:430px;
+  border:none;
+}
+
+/* MESSAGE SECTION */
+
+.messageSection{
+  padding:80px 20px;
+  background:#fff;
+}
+
+.messageContainer{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.formSide h2{
+  font-size:38px;
+  margin-bottom:15px;
+  font-family:'Mulish', sans-serif;
+}
+
+.formSide p{
+  margin-bottom:25px;
+  color:#555;
+    font-family: 'Mulish', sans-serif;
+
+}
+
+.contactForm .row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+  margin-bottom:20px;
+}
+
+.contactForm input,
+.contactForm textarea{
+  width:100%;
+  padding:14px;
+  border:1px solid #ddd;
+  font-size:15px;
+    font-family: 'Mulish', sans-serif;
+
+  outline:none;
+}
+
+.contactForm textarea{
+  height:140px;
+  resize:none;
+    font-family: 'Mulish', sans-serif;
+
+  margin-bottom:20px;
+}
+
+.note{
+  font-size:14px;
+  color:#666;
+  margin-bottom:25px;
+    font-family: 'Mulish', sans-serif;
+
+}
+
+.contactForm button{
+  background:rgb(228,4,4);
+  color:#fff;
+  border:none;
+  padding:14px 35px;
+    font-family: 'Mulish', sans-serif;
+  font-weight:700;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.contactForm button:hover{
+  background:#000;
+}
+
+.imageSide img{
+  width:100%;
+  border-radius:12px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .messageContainer{
+    grid-template-columns:1fr;
+  }
+
+  .contactForm .row{
+    grid-template-columns:1fr;
+  }
+
+}

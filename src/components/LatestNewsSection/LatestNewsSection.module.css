@@ -1,0 +1,253 @@
+.section {
+  padding: 20px 20px 80px 20px; /* ⭐ reduced top padding */
+  background: #ffffff;
+  font-family: mulish; /* same font as Philanthropy */
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* LEFT NEWS */
+
+.newsArea {
+  flex: 2;
+}
+
+.title {
+  font-size: 22px;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* MAIN NEWS */
+
+.mainNews {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  align-items: flex-start;
+}
+
+.mainNews img {
+  width: 680px;     /* increased size */
+  height: 260px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.mainText h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.mainText p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.mainText span {
+  font-size: 13px;
+  color: #888;
+}
+
+.newsHighlights {
+  margin: 15px 0;
+  font-size: 14px;
+}
+
+.newsHighlights strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.newsHighlights ul {
+  padding-left: 20px;
+  margin: 0;
+  color: #555;
+}
+
+.newsHighlights li {
+  margin-bottom: 4px;
+}
+
+.newsEnquiries {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.newsEnquiries strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.newsEnquiries p {
+  margin: 2px 0 !important;
+  color: #555;
+}
+
+.newsEnquiries a {
+  color: #ff2020;
+  text-decoration: none;
+}
+
+.newsEnquiries a:hover {
+  text-decoration: underline;
+}
+
+.joinLink {
+  display: inline-block;
+  background-color: #ff2020;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  margin: 10px 0;
+  transition: background-color 0.3s;
+}
+
+.joinLink:hover {
+  background-color: #d01a1a;
+}
+
+.newsDate {
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #888;
+}
+
+/* SMALL NEWS */
+
+.smallNews {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.item {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.item img {
+  width: 75px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.item p {
+  font-size: 14px;
+  margin: 0;
+  color: #333;
+}
+
+.item span {
+  font-size: 12px;
+  color: #888;
+}
+
+/* SUBSCRIBE */
+
+.subscribeBox {
+  flex: 1;
+  background: #ff2020;
+  color: white;
+  padding: 35px 30px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+}
+
+.subscribeBox h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.subscribeBox p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.subscribeBox input:not([type="checkbox"]) {
+  padding: 12px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+}
+
+.consentWrapper {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+.consentWrapper input {
+  cursor: pointer;
+  margin-top: 2px;
+}
+
+.consentWrapper label {
+  cursor: pointer;
+}
+
+/* BUTTON — SMALL WIDTH LIKE DESIGN */
+
+.subscribeBox button {
+  background: white;
+  color: #ff2020;
+  padding: 10px 22px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  width: fit-content;   /* ⭐ makes button small */
+  align-self: center;   /* ⭐ centers button */
+  font-weight: 700;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .section {
+    padding: 15px 15px 60px 15px; /* ⭐ reduced mobile top padding */
+  }
+
+  .container {
+    flex-direction: column;
+    margin-top: 0;
+    gap: 30px;
+  }
+
+  .mainNews {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .mainNews img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .subscribeBox {
+    padding: 25px 20px;
+  }
+}

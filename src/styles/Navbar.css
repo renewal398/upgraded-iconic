@@ -1,0 +1,51 @@
+/* ===== NAVBAR WRAPPER ===== */
+.navbar {
+  position: sticky;        /* makes it sticky */
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px 60px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* ===== LOGO ===== */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.nav-logo img {
+  width: 35px;
+}
+
+/* ===== NAV LINKS ===== */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* hover effect */
+.nav-links a:hover {
+  color: #007bff;
+}
+
+/* active link (React Router NavLink) */
+.nav-links a.active {
+  color: #ff6600;
+}

@@ -1,0 +1,261 @@
+/* ================= SECTION ================= */
+
+.aboutSection {
+  padding: 60px 15px;
+  text-align: center;
+  background: #f9f9f9;
+  font-family: "Mulish", sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.title {
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  color: rgb(228, 4, 4);
+  margin-bottom: 15px;
+}
+
+.description {
+  max-width: 850px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+  color: #555;
+  font-size: 15px;
+}
+
+.subtext {
+  margin-bottom: 30px;
+  color: #777;
+  font-size: 14px;
+}
+
+/* ================= GRID ================= */
+
+.imageGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+/* ================= CARD ================= */
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover img {
+  transform: scale(1.08);
+}
+
+/* ================= OVERLAY ================= */
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 14px 0;
+  text-align: center;
+}
+
+.overlay h3 {
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* ================= BUTTON ================= */
+
+.buttonContainer {
+  margin-top: 15px;
+}
+
+.consultBtn {
+  padding: 12px 26px;
+  background: rgb(228, 4, 4);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.consultBtn:hover {
+  opacity: 0.9;
+}
+
+/* ================= MODAL ================= */
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px); /* ⭐ blur background */
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: center;
+
+  z-index: 2000; /* ⭐ higher than navbar (1000) */
+  padding: 30px 20px; /* ⭐ reduced to shift up on laptop */
+  overflow-y: auto;
+}
+
+/* DESKTOP MODAL */
+
+.modalBox {
+  background: white;
+  width: 100%;
+  max-width: 700px;
+  border-radius: 12px;
+  padding: 40px;
+  position: relative;
+  text-align: center;
+  animation: popup 0.3s ease;
+
+  margin-top: 20px;
+
+  max-height: 90vh; /* ⭐ increased height */
+  overflow-y: auto; /* ⭐ scroll if content too long */
+}
+
+@keyframes popup {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modalBox h2 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.modalBox p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* ================= FORM ================= */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form input,
+.form textarea {
+  padding: 13px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  font-size: 15px;
+}
+
+.form textarea {
+  min-height: 150px; /* ⭐ increased height */
+  resize: none;
+}
+
+.sendBtn {
+  margin-top: 12px;
+  background: rgb(228, 4, 4);
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sendBtn:hover {
+  opacity: 0.9;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .imageGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .aboutSection {
+    padding: 45px 12px;
+  }
+
+  .imageGrid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .card img {
+    height: 200px;
+  }
+
+  .modalOverlay {
+    padding: 40px 5px; /* ⭐ balanced top padding */
+  }
+
+  .modalBox {
+    max-width: 96%;
+    padding: 30px 15px;
+    margin-top: 5px;
+
+    min-height: 85vh; /* ⭐ forced minimum height */
+    max-height: 96vh; /* ⭐ maximized height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+  }
+
+  .form textarea {
+    min-height: 120px; /* ⭐ larger textarea */
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,275 @@
+/* ============================= */
+/* ===== GLOBAL SAFETY ======== */
+/* ============================= */
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+.sectionOne,
+.sectionTwo,
+.sectionThree{
+  width:100%;
+  padding:80px 20px;
+  font-family:'Mulish',sans-serif;
+  overflow:hidden;
+}
+
+/* ============================= */
+/* ===== MAIN CONTAINER ======= */
+/* ============================= */
+
+.container{
+  width:100%;
+  max-width:1100px;
+  margin:0 auto;
+
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+/* Prevent grid children overflow */
+
+.container > *{
+  min-width:0;
+}
+
+/* ============================= */
+/* ===== SECTION 1 IMAGES ===== */
+/* ============================= */
+
+.imageGroup{
+  display:flex;
+  gap:20px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.imageGroup img{
+  height:auto;
+  max-width:100%;
+}
+
+.imageGroup img:first-child{
+  width:140px;
+}
+
+.imageGroup img:last-child{
+  width:260px;
+  border-radius:8px;
+}
+
+/* ============================= */
+/* ===== TEXT CONTENT ========= */
+/* ============================= */
+
+.textContent h2{
+  font-size:32px;
+  font-weight:700;
+  color:rgb(228,4,4);
+  margin-bottom:20px;
+  line-height:1.3;
+}
+
+.textContent p{
+  color:#666;
+  line-height:1.7;
+  margin-bottom:14px;
+  font-size:15px;
+}
+
+/* ============================= */
+/* ===== SECTION 2 TEXT ======= */
+/* ============================= */
+
+.textBlock h3{
+  color:rgb(228,4,4);
+  margin-bottom:10px;
+  font-size:30px;
+}
+
+.visionTitle{
+  margin-top:30px;
+}
+
+.textBlock p{
+  color:#666;
+  line-height:1.7;
+  margin-bottom:15px;
+}
+
+/* ============================= */
+/* ===== SECTION 2 IMAGE ====== */
+/* ============================= */
+
+.visionImage{
+  display:flex;
+  justify-content:center;
+}
+
+.visionImage img{
+  width:100%;
+  max-width:450px;
+  height:auto;
+  border-radius:10px;
+}
+
+/* ============================= */
+/* ===== SECTION 3 IMAGES ===== */
+/* ============================= */
+
+.sustainabilityImages{
+  display:flex;
+  gap:20px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.sustainabilityImages img{
+  height:auto;
+  max-width:100%;
+}
+
+.sustainabilityImages img:first-child{
+  width:260px;
+  border-radius:8px;
+}
+
+.sustainabilityImages img:last-child{
+  width:220px;
+}
+
+/* ============================= */
+/* ===== SUSTAINABILITY TEXT == */
+/* ============================= */
+
+.sustainabilityText h2{
+  font-size:30px;
+  margin-bottom:20px;
+  color:rgb(228,4,4);
+}
+
+.sustainabilityText p{
+  color:#666;
+  line-height:1.7;
+  margin-bottom:14px;
+}
+
+.sustainabilityText ul{
+  margin-top:20px;
+  padding-left:20px;
+}
+
+.sustainabilityText li{
+  margin-bottom:12px;
+  color:#444;
+  line-height:1.6;
+}
+
+.sustainabilityText li::marker{
+  color:rgb(228,4,4);
+}
+
+/* ============================= */
+/* ===== TABLET RESPONSIVE ==== */
+/* ============================= */
+
+@media (max-width:900px){
+
+  .container{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+
+  .imageGroup,
+  .sustainabilityImages{
+    justify-content:center;
+  }
+
+}
+
+/* ============================= */
+/* ===== MOBILE RESPONSIVE ==== */
+/* ============================= */
+
+@media (max-width:600px){
+
+  .sectionOne,
+  .sectionTwo,
+  .sectionThree{
+    padding:60px 16px;
+  }
+
+  /* ===== SECTION 1 IMAGES ===== */
+
+  .imageGroup{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    flex-wrap:nowrap; /* keep them together */
+  }
+
+  .imageGroup img:first-child{
+    width:120px;
+  }
+
+  .imageGroup img:last-child{
+    width:120px;
+  }
+
+  /* ===== SECTION 2 IMAGE ===== */
+
+  .sectionTwo .container{
+    display:flex;
+    flex-direction:column;
+  }
+
+  .visionImage{
+    order:-1;
+    margin-bottom:20px;
+    display:flex;
+    justify-content:center;
+  }
+
+  .visionImage img{
+    width:100%;
+  }
+
+  /* ===== SECTION 3 IMAGES ===== */
+
+  .sustainabilityImages{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    flex-wrap:nowrap; /* keep them together */
+  }
+
+  .sustainabilityImages img:first-child{
+    width:120px;
+  }
+
+  .sustainabilityImages img:last-child{
+    width:120px;
+  }
+
+  /* ===== TEXT SIZE ===== */
+
+  .textContent h2{
+    font-size:24px;
+  }
+
+  .textBlock h3{
+    font-size:20px;
+  }
+
+  .sustainabilityText h2{
+    font-size:24px;
+  }
+
+}

@@ -1,0 +1,262 @@
+.footerSection {
+  width: 100%;
+  background: #ffffff;
+  font-family: "Mulish", sans-serif;
+}
+
+/* CENTER CONTENT */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ================= SUBSCRIBE ================= */
+.subscribe {
+  border-top: 1px solid #a5a4a4;
+  padding: 50px 0 30px 0; /* Slightly increased from 10px */
+  text-align: center;
+}
+
+.titleUnderline {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* FORM */
+.form {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.form input {
+  padding: 12px 15px;
+  width: 260px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+}
+
+.form input:focus {
+  border-color: rgb(228, 4, 4);
+}
+
+.form button {
+  padding: 12px 22px;
+  background: rgb(228, 4, 4);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.form button:hover {
+  opacity: 0.9;
+}
+
+/* ================= FOOTER CONTENT ================= */
+.footerContent {
+  padding: 50px 0 60px 0; /* Increased from 20px to shift contents down */
+}
+
+.footerContent .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* COMPANY INFO */
+.companyInfo,
+.contactInfo,
+.quickLinks {
+  flex: 1;
+  min-width: 250px;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 35px;
+}
+
+.logoWrapper h2 {
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.companyInfo p {
+  margin: 20px 0;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* SOCIALS */
+.socialIcons {
+  display: flex;
+  justify-content: start;
+  gap: 0.9rem;
+}
+
+.socialIcons a {
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.socialIcons i {
+  font-size: 1.5rem;
+  color: #de1f26;
+  transition: color 0.3s ease-in-out;
+}
+
+.socialIcons a:hover i {
+  color: #001f3f;
+  text-align: center;
+}
+
+/* CONTACT */
+.contactInfo,
+.contactQuick {
+  flex: 1;
+  min-width: 250px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #495057;
+}
+
+.contactItem i {
+  color: #df1f26;
+  font-size: 1rem;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.contactItem span {
+  display: inline-block;
+}
+
+.centeredTitle {
+  text-align: start;
+  position: relative;
+  color: #495057;
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+}
+
+.centeredTitle::after {
+  content: "";
+  display: block;
+  width: 5rem;
+  height: 1.5px;
+  background-color: #de1f26;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.quickLinksList {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.quickLinksList li {
+  margin-bottom: 12px;
+}
+
+.quickLinksList a {
+  text-decoration: none;
+  color: #495057;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.listBullet {
+  color: #495057;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.quickLinksList a:hover {
+  color: #de1f26;
+}
+
+/* ================= COPYRIGHT ================= */
+.copyRight {
+  background: rgb(228, 4, 4);
+  color: white;
+  text-align: center;
+  padding: 22px 0;
+  width: 100%;
+}
+
+.legal {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.legal span:hover {
+  text-decoration: underline;
+}
+
+/* ================= WHATSAPP ================= */
+.whatsapp {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .footerContent .container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .whatsapp {
+    width: 65px;
+    height: 65px;
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .legal {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
